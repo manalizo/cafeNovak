@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../images/logo.jpeg">
+  <link rel="icon" href="images/logo.jpeg">
+  <title>Café Novak</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- PAGE-->
+  <div class="page">
+
+    <!-- NAV -->
+    <header class="header">
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Café Novak Logo">
+      </div>
+
+   
+
+      <!-- VISITOR INFO IN NAVBAR -->
+      <div class="navbar-visitor-info">
+        <div class="visitor-location">
+   
+          <div class="location-text">
+            <span class="deliver-to">Deliver to</span>
+            <span id="location" class="location-name">Loading...</span>
+          </div>
+        </div>
+        <div class="visitor-count">
+      
+          <span id="count" class="count-number">0</span>
+          <span class="visitors-text">visitors</span>
+        </div>
+      </div>
+         <nav class="nav">
+        <a class="active" href="index.html">Accueil</a>
+        <a href="pages/about.html">À propos</a>
+        <a href="pages/menu.html">Menu</a>
+        <a href="pages/gallery.html">Galerie</a>
+        <a href="pages/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Des grains soigneusement sélectionnés, torréfiés avec passion</h1>
+        <p>Découvrez nos spécialités</p>
+        <div class="buttons">
+          <a class="btn" href="pages/menu.html">Order Now</a>
+          <a class="btn btn-outline" href="pages/contact.html">Contact</a>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- MENU -->
+    <section class="section">
+      <h2>Notre Menu Populaire</h2>
+      <p class="section-subtitle">Les favoris de nos clients</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-badge">Populaire</div>
+          <img src="images/menu-espresso.jpg" alt="Espresso">
+          <h3>Espresso</h3>
+          <p class="price">10 DH</p>
+          <p class="description">Intense et corsé</p>
+          <button>Commander</button>
+        </div>
+
+        <div class="card">
+          <div class="card-badge">Best Seller</div>
+          <img src="images/menu-cappuccino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p class="price">15 DH</p>
+          <p class="description">Onctueux et crémeux</p>
+          <button>Commander</button>
+        </div>
+
+        <div class="card">
+          <img src="images/menu-latte.jpg" alt="Latte">
+          <h3>Latte</h3>
+          <p class="price">18 DH</p>
+          <p class="description">Doux et velouté</p>
+          <button>Commander</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI BEVERAGE RECOGNITION SECTION -->
+    <section class="section">
+      <h2>Reconnaissance des boissons par intelligence artificielle</h2>
+      <p class="section-subtitle">Importer une photo et laissez l'IA identifier votre boisson!</p>
+      
+      <div class="ai-recognition-container">
+        <div id="ai-status" class="status info">
+          Chargement du modèle IA... Veuillez patienter.
+        </div>
+        
+        <div class="upload-section-ai">
+          <input type="file" id="beverageImageUpload" accept="image/*" style="display: none;">
+          <button class="btn upload-ai-btn" onclick="document.getElementById('beverageImageUpload').click()">
+             Importer une image
+          </button>
+        </div>
+        
+        <div class="ai-preview-container">
+          <img id="beverageImagePreview" alt="Preview" class="ai-preview-image">
+        </div>
+        
+        <div class="ai-loading" id="ai-loading">
+          <p> Analyse de l'image en cours...</p>
+        </div>
+        
+        <div id="ai-results" class="ai-results"></div>
+      </div>
+    </section>
+
+  
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2026 Café Novak - Tous droits réservés
+  </footer>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  
+  <script src="js/counter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/ai-recognition.js"></script>
+</body>
+</html>
